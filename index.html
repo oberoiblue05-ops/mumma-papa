@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Special Birthday Invite 💌</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', cursive;
+            text-align: center;
+            color: white;
+            background-image: url("us.jpeg");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 20px;
+            width: 80%;
+            max-width: 600px;
+        }
+        
+        h1 {
+            font-size: 35px;
+        }
+        
+        p {
+            font-size: 20px;
+        }
+        
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            margin: 15px;
+            transition: 0.3s;
+        }
+        
+        #yesBtn {
+            background-color: #ff4da6;
+            color: white;
+        }
+        
+        #yesBtn:hover {
+            background-color: #ff1a8c;
+            transform: scale(1.1);
+        }
+        
+        #noBtn {
+            background-color: #cccccc;
+        }
+        
+        #message {
+            margin-top: 20px;
+            font-size: 22px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="overlay">
+        <h1>Hi Mumma & Papa 🥺💖</h1>
+        <p>
+            I may be far because of college... but my heart is always at home 🏠💞
+            <br><br> My birthday is on <b>5th March 🎂</b>
+            <br><br> Will you please host my birthday party and celebrate it with me? 🥳
+        </p>
+
+        <button id="yesBtn" onclick="sayYes()">YES 😍</button>
+        <button id="noBtn" onmouseover="moveNo()">NO 😤</button>
+
+        <div id="message">
+            YAYYYY 🥳💖 Best parents ever!!! Party officially hosted by Mumma & Papa 🎂🎉
+        </div>
+    </div>
+
+    <script>
+        function sayYes() {
+            document.getElementById("message").style.display = "block";
+            alert("I knew you'd say YES 😎💖");
+        }
+
+        function moveNo() {
+            const noBtn = document.getElementById("noBtn");
+            const x = Math.random() * 300 - 150;
+            const y = Math.random() * 200 - 100;
+            noBtn.style.transform = `translate(${x}px, ${y}px)`;
+        }
+    </script>
+
+</body>
+
+</html>
